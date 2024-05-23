@@ -1,12 +1,12 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import axios from "axios";
-import * as yup from "yup";
+// import * as yup from "yup";
 import { Link, useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
 
 export function ShopperLogin() {
     const navigate = useNavigate();
-    const [cookies, setCookie, removeCookie] = useCookies(["user"]);
+    const [cookies, setCookies, removeCookies] = useCookies(["user"]);
     return (
         <div className="container-fluid">
             <h2>User Login</h2>
@@ -23,8 +23,8 @@ export function ShopperLogin() {
                         })
                             .then((response) => {
                                 for (var user of response.data) {
-                                    if (user.UserId == values.userId && user.Password == values.password) {
-                                        setCookie("userId", values.userId);
+                                    if (user.UserId === values.userId && user.Password === values.password) {
+                                        setCookies("userId", values.userId);
                                         navigate("/home");
                                         break;
                                     } else {

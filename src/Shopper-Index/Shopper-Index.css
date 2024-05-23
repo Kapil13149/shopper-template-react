@@ -1,19 +1,17 @@
-#banner {
-    height: 838px;
+/* #banner {
+    /* height: 838px; */
     /* background-image: url(/src/top-view-alarm-clock-with-shopping-cart.jpg); */
-    background-position: center;
-    background-color: #ffffff;
+    /* background-position: center; */
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+    /* background-color: #ffffff; */
 
-}
 
-#shade {
+/* #shade {
     height: 838px;
-    background-color: rgba(0,0,0,0.5);
-}
-main {
-    height: 400px;
-    display:flex;
-    justify-content: center;
-    align-items: center;
+    /* background-color: rgba(0,0,0,0.5); */
 
+
+nav .btn {
+    color: white;
 }

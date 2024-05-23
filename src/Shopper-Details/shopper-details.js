@@ -19,7 +19,7 @@ export function ShopperDetails() {
             <h2>Details</h2>
             <div className="row">
                 <div className="col-4">
-                    <img src={product.image} width="200" height="200" />
+                    <img alt={product.title} src={product.image} width="200" height="200" />
                 </div>
                 <div className="col-8">
                     <dl>

@@ -17,7 +17,7 @@ export function ShopperRegister() {
     // alert(e.target.value);
     for (var user of users) {
       if (user.UserId === e.target.value) {
-        setUserError("UserId Taken - Please Try Another");
+        setUserError("UserId Already Exist - Please Try Another");
         break;
       } else {
         setUserError("");
@@ -126,7 +126,7 @@ export function ShopperRegister() {
               Register
             </button>
             <div className="mt-3">
-              Already have an account? <a href="/login">Login</a>
+              Already have an account ? <a href="/login">Login</a>
             </div>
           </Form>
         }
