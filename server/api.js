@@ -46,11 +46,12 @@ app.post("/addproducts", (req, res) => {
                 "ProductID": parseInt(req.body.ProductID),
                 "Name": req.body.Name,
                 "Price": parseFloat(req.body.Price),
-                "Stock": (req.body.Stock === "true" ? true : false)
+                "Stock": (req.body.Stock === true ? true : false),
             };
             db.collection("products").insertOne(product)
-                .then((result) => {
-                    console.log("Record Inserted Successfully");
+            .then((result) => {
+                console.log("Record Inserted Successfully");
+                console.log(product.Stock);
                     res.redirect("/products");
                 })
         })
@@ -67,7 +68,7 @@ app.put("/updateproduct/:id", (req, res) => {
                 $set: {
                     Name: req.body.Name,
                     Price: parseFloat(req.body.Price),
-                    Stock: (req.body.Stock === "true" ? true : false)
+                    Stock: (req.body.Stock === "false" ? true : false)
                 }
             };
             db.collection("products").updateOne(findQuery, updateQuery)
