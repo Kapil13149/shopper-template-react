@@ -1,0 +1,10 @@
+/* main {
+    height: 500px;
+    overflow: auto;
+} */
+.card-header {
+    height: 160px;
+}
+.card {
+    width: 200px;
+}
